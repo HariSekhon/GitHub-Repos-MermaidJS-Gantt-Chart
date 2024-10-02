@@ -50,7 +50,7 @@ func main() {
 	if *helpFlag {
 		fmt.Println(`
 Generates a Mermaid.js Gantt chart of a GitHub user's public repos active dates
-using each created and pushed date
+using each repo's created and pushed dates
 
 Arguments:
   <github_username>      GitHub username for which to fetch the repositories
