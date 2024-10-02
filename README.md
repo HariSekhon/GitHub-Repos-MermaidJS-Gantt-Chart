@@ -47,7 +47,7 @@
 [![Trivy](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/trivy.yaml/badge.svg)](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/trivy.yaml)
 
 Generates a [MermaidJS](https://mermaid.js.org/) Gantt chart of a GitHub user's public repos active dates
-using each repo's created and pushed dates
+using each repo's created and pushed dates.
 
 <!-- INDEX_START -->
 
