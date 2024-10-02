@@ -38,7 +38,7 @@ cd "$srcdir"
 timestamp "Starting main.go to generate the gantt_chart.md file"
 echo
 
-#go run main.go HariSekhon
+go run main.go HariSekhon
 
 echo
 
