@@ -48,6 +48,24 @@ TODO: update Codacy grade link below - it's a hash so cannot be predicted to rep
 [![SonarCloud](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/sonarcloud.yaml/badge.svg)](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/sonarcloud.yaml)
 [![Trivy](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/trivy.yaml/badge.svg)](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/trivy.yaml)
 
+<!-- INDEX_START -->
+
+- [Run](#run)
+- [Build Binary](#build-binary)
+- [Results](#results)
+- [MermaidJS Gantt Config](#mermaidjs-gantt-config)
+- [More Core Repos](#more-core-repos)
+  - [Knowledge](#knowledge)
+  - [DevOps Code](#devops-code)
+  - [Containerization](#containerization)
+  - [CI/CD](#cicd)
+  - [DBA - SQL](#dba---sql)
+  - [DevOps Reloaded](#devops-reloaded)
+  - [Templates](#templates)
+  - [Misc](#misc)
+
+<!-- INDEX_END -->
+
 ## Run
 
 ```shell
