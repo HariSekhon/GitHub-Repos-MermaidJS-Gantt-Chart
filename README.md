@@ -80,10 +80,10 @@ Use this binary
 
 Generates a `gant_chart.md` with contents like this:
 
-````
 <!-- GANTT_CHART_START -->
-<!-- GANTT_CHART_END -->
 ````
+````
+<!-- GANTT_CHART_END -->
 
 That visualizes like this:
 
