@@ -166,6 +166,14 @@ gantt
 
 <!-- GANTT_CHART2_END -->
 
+## MermaidJS Gantt Config
+
+This file contains the settings that are read into the `gantt_chart.mmd` file:
+
+```none
+init.mmd
+```
+
 ## More Core Repos
 
 <!-- OTHER_REPOS_START -->
