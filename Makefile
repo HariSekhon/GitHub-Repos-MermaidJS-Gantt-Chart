@@ -44,7 +44,8 @@ BINARY=github-repos-gantt
 
 .PHONY: default
 default:
-	go run main.go HariSekhon
+	@#go run main.go HariSekhon
+	./run.sh
 
 .PHONY: build
 build: init
