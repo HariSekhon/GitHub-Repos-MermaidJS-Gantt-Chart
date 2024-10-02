@@ -105,9 +105,9 @@ Usage: go run main.go <github_username>
 	initFile := "init.mmd"
 	log.Info("Reading Gantt Chart Config from ", initFile)
 	ganttConfigBytes, err := ioutil.ReadFile(initFile)
-    if err != nil {
-        log.Fatalf("Error reading file: %v", err)
-    }
+	if err != nil {
+		log.Fatalf("Error reading file: %v", err)
+	}
 
 	ganttConfig := string(ganttConfigBytes)
 
