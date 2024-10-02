@@ -42,6 +42,10 @@ CODE_FILES := $(shell git ls-files | grep -E -e '\.sh$$' -e '\.go$$' | sort)
 
 BINARY=github-repos-gantt
 
+.PHONY: default
+default:
+	go run main.go HariSekhon
+
 .PHONY: build
 build: init
 	@echo ================
@@ -50,10 +54,6 @@ build: init
 	@$(MAKE) git-summary
 	@echo
 	go build -o "$(BINARY)" main.go
-
-.PHONY: gorun
-gorun:
-	go run main.go HariSekhon
 
 .PHONY: init
 init:
