@@ -120,38 +120,38 @@ Generates a `gant_chart.mmd` with contents like this:
 gantt
     dateFormat  YYYY-MM-DD
     title Repositories Gantt Chart
-    Nagios-Plugins : 2012-12-30, 2012-12-30, 2024-09-22
-    lib : 2012-12-30, 2012-12-30, 2024-09-22
-    Spotify-tools : 2012-12-30, 2012-12-30, 2024-09-22
-    DevOps-Perl-tools : 2012-12-30, 2012-12-30, 2024-09-22
-    spark-apps : 2015-05-25, 2015-05-25, 2020-04-02
-    lib-java : 2015-05-31, 2015-05-31, 2024-09-22
-    pylib : 2015-10-27, 2015-10-27, 2024-09-23
-    DevOps-Python-tools : 2015-10-27, 2015-10-27, 2024-09-23
-    Dockerfiles : 2016-01-17, 2016-01-17, 2024-09-28
-    DevOps-Bash-tools : 2016-01-17, 2016-01-17, 2024-09-28
-    Nagios-Plugin-Kafka : 2016-06-07, 2016-06-07, 2024-09-22
-    HAProxy-configs : 2018-06-08, 2018-06-08, 2024-09-22
-    DevOps-Golang-tools : 2020-04-30, 2020-04-30, 2024-09-22
-    Spotify-Playlists : 2020-06-29, 2020-06-29, 2024-09-22
-    SQL-scripts : 2020-08-05, 2020-08-05, 2024-09-21
-    Kubernetes-configs : 2020-09-16, 2020-09-16, 2024-09-21
-    SQL-keywords : 2020-09-16, 2020-09-16, 2024-09-21
-    Templates : 2020-09-16, 2020-09-16, 2024-09-25
-    TeamCity-CI : 2020-12-03, 2020-12-03, 2024-09-21
-    Terraform : 2021-01-18, 2021-01-18, 2024-09-21
-    Jenkins : 2022-01-17, 2022-01-17, 2024-09-23
-    GitHub-Actions : 2022-01-17, 2022-01-17, 2024-09-22
-    CI-CD : 2022-03-25, 2022-03-25, 2024-10-01
-    GitHub-Actions-Contexts : 2022-08-17, 2022-08-17, 2024-09-21
-    Diagrams-as-Code : 2023-04-14, 2023-04-14, 2024-10-02
-    Template-Repo : 2023-04-15, 2023-04-15, 2024-09-22
-    Packer : 2023-06-02, 2023-06-02, 2024-09-21
-    Vagrant-templates : 2023-06-12, 2023-06-12, 2024-09-21
-    Knowledge-Base : 2023-11-22, 2023-11-22, 2024-09-29
-    HariSekhon : 2024-08-14, 2024-08-14, 2024-10-02
-    GitHub-Commit-Times-Graph : 2024-09-07, 2024-09-07, 2024-09-08
-    GitHub-Repos-MermaidJS-Gantt-Chart : 2024-10-02, 2024-10-02, 2024-10-02
+    Nagios-Plugins : active, 2012-12-30, 2024-09-22
+    lib : active, 2012-12-30, 2024-09-22
+    Spotify-tools : active, 2012-12-30, 2024-09-22
+    DevOps-Perl-tools : active, 2012-12-30, 2024-09-22
+    spark-apps : done, 2015-05-25, 2020-04-02
+    lib-java : active, 2015-05-31, 2024-09-22
+    pylib : active, 2015-10-27, 2024-09-23
+    DevOps-Python-tools : active, 2015-10-27, 2024-09-23
+    Dockerfiles : active, 2016-01-17, 2024-09-28
+    DevOps-Bash-tools : active, 2016-01-17, 2024-09-28
+    Nagios-Plugin-Kafka : active, 2016-06-07, 2024-09-22
+    HAProxy-configs : active, 2018-06-08, 2024-09-22
+    DevOps-Golang-tools : active, 2020-04-30, 2024-09-22
+    Spotify-Playlists : active, 2020-06-29, 2024-09-22
+    SQL-scripts : active, 2020-08-05, 2024-09-21
+    Kubernetes-configs : active, 2020-09-16, 2024-09-21
+    SQL-keywords : active, 2020-09-16, 2024-09-21
+    Templates : active, 2020-09-16, 2024-09-25
+    TeamCity-CI : active, 2020-12-03, 2024-09-21
+    Terraform : active, 2021-01-18, 2024-09-21
+    Jenkins : active, 2022-01-17, 2024-09-23
+    GitHub-Actions : active, 2022-01-17, 2024-09-22
+    CI-CD : active, 2022-03-25, 2024-10-01
+    GitHub-Actions-Contexts : active, 2022-08-17, 2024-09-21
+    Diagrams-as-Code : active, 2023-04-14, 2024-10-02
+    Template-Repo : active, 2023-04-15, 2024-09-22
+    Packer : active, 2023-06-02, 2024-09-21
+    Vagrant-templates : active, 2023-06-12, 2024-09-21
+    Knowledge-Base : active, 2023-11-22, 2024-09-29
+    HariSekhon : active, 2024-08-14, 2024-10-02
+    GitHub-Commit-Times-Graph : active, 2024-09-07, 2024-09-08
+    GitHub-Repos-MermaidJS-Gantt-Chart : active, 2024-10-02, 2024-10-02
 ```
 
 <!-- GANTT_CHART_END -->
@@ -182,38 +182,38 @@ That can be embedded into a GitHub `README.md` or run in MermaidJS to visualize 
 gantt
     dateFormat  YYYY-MM-DD
     title Repositories Gantt Chart
-    Nagios-Plugins : 2012-12-30, 2012-12-30, 2024-09-22
-    lib : 2012-12-30, 2012-12-30, 2024-09-22
-    Spotify-tools : 2012-12-30, 2012-12-30, 2024-09-22
-    DevOps-Perl-tools : 2012-12-30, 2012-12-30, 2024-09-22
-    spark-apps : 2015-05-25, 2015-05-25, 2020-04-02
-    lib-java : 2015-05-31, 2015-05-31, 2024-09-22
-    pylib : 2015-10-27, 2015-10-27, 2024-09-23
-    DevOps-Python-tools : 2015-10-27, 2015-10-27, 2024-09-23
-    Dockerfiles : 2016-01-17, 2016-01-17, 2024-09-28
-    DevOps-Bash-tools : 2016-01-17, 2016-01-17, 2024-09-28
-    Nagios-Plugin-Kafka : 2016-06-07, 2016-06-07, 2024-09-22
-    HAProxy-configs : 2018-06-08, 2018-06-08, 2024-09-22
-    DevOps-Golang-tools : 2020-04-30, 2020-04-30, 2024-09-22
-    Spotify-Playlists : 2020-06-29, 2020-06-29, 2024-09-22
-    SQL-scripts : 2020-08-05, 2020-08-05, 2024-09-21
-    Kubernetes-configs : 2020-09-16, 2020-09-16, 2024-09-21
-    SQL-keywords : 2020-09-16, 2020-09-16, 2024-09-21
-    Templates : 2020-09-16, 2020-09-16, 2024-09-25
-    TeamCity-CI : 2020-12-03, 2020-12-03, 2024-09-21
-    Terraform : 2021-01-18, 2021-01-18, 2024-09-21
-    Jenkins : 2022-01-17, 2022-01-17, 2024-09-23
-    GitHub-Actions : 2022-01-17, 2022-01-17, 2024-09-22
-    CI-CD : 2022-03-25, 2022-03-25, 2024-10-01
-    GitHub-Actions-Contexts : 2022-08-17, 2022-08-17, 2024-09-21
-    Diagrams-as-Code : 2023-04-14, 2023-04-14, 2024-10-02
-    Template-Repo : 2023-04-15, 2023-04-15, 2024-09-22
-    Packer : 2023-06-02, 2023-06-02, 2024-09-21
-    Vagrant-templates : 2023-06-12, 2023-06-12, 2024-09-21
-    Knowledge-Base : 2023-11-22, 2023-11-22, 2024-09-29
-    HariSekhon : 2024-08-14, 2024-08-14, 2024-10-02
-    GitHub-Commit-Times-Graph : 2024-09-07, 2024-09-07, 2024-09-08
-    GitHub-Repos-MermaidJS-Gantt-Chart : 2024-10-02, 2024-10-02, 2024-10-02
+    Nagios-Plugins : active, 2012-12-30, 2024-09-22
+    lib : active, 2012-12-30, 2024-09-22
+    Spotify-tools : active, 2012-12-30, 2024-09-22
+    DevOps-Perl-tools : active, 2012-12-30, 2024-09-22
+    spark-apps : done, 2015-05-25, 2020-04-02
+    lib-java : active, 2015-05-31, 2024-09-22
+    pylib : active, 2015-10-27, 2024-09-23
+    DevOps-Python-tools : active, 2015-10-27, 2024-09-23
+    Dockerfiles : active, 2016-01-17, 2024-09-28
+    DevOps-Bash-tools : active, 2016-01-17, 2024-09-28
+    Nagios-Plugin-Kafka : active, 2016-06-07, 2024-09-22
+    HAProxy-configs : active, 2018-06-08, 2024-09-22
+    DevOps-Golang-tools : active, 2020-04-30, 2024-09-22
+    Spotify-Playlists : active, 2020-06-29, 2024-09-22
+    SQL-scripts : active, 2020-08-05, 2024-09-21
+    Kubernetes-configs : active, 2020-09-16, 2024-09-21
+    SQL-keywords : active, 2020-09-16, 2024-09-21
+    Templates : active, 2020-09-16, 2024-09-25
+    TeamCity-CI : active, 2020-12-03, 2024-09-21
+    Terraform : active, 2021-01-18, 2024-09-21
+    Jenkins : active, 2022-01-17, 2024-09-23
+    GitHub-Actions : active, 2022-01-17, 2024-09-22
+    CI-CD : active, 2022-03-25, 2024-10-01
+    GitHub-Actions-Contexts : active, 2022-08-17, 2024-09-21
+    Diagrams-as-Code : active, 2023-04-14, 2024-10-02
+    Template-Repo : active, 2023-04-15, 2024-09-22
+    Packer : active, 2023-06-02, 2024-09-21
+    Vagrant-templates : active, 2023-06-12, 2024-09-21
+    Knowledge-Base : active, 2023-11-22, 2024-09-29
+    HariSekhon : active, 2024-08-14, 2024-10-02
+    GitHub-Commit-Times-Graph : active, 2024-09-07, 2024-09-08
+    GitHub-Repos-MermaidJS-Gantt-Chart : active, 2024-10-02, 2024-10-02
 ```
 
 <!-- GANTT_CHART2_END -->
