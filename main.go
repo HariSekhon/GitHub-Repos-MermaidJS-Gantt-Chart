@@ -44,15 +44,13 @@ type GitHubCommit struct {
 }
 
 func main() {
-	// Step 1: Command-line argument parsing
 	helpFlag := flag.Bool("help", false, "Show help message")
 	flag.Parse()
 
-	// Step 2: Handle --help flag
 	if *helpFlag {
 		fmt.Println(`
-Generates a Markdown file gantt_chart.mmd with a Mermaid.js Gantt chart showing the start and end commit dates
-of all public GitHub repositories for the specified user
+Generates a Mermaid.js Gantt chart of a GitHub user's public repos active dates
+using each created and pushed date
 
 Arguments:
   <github_username>      GitHub username for which to fetch the repositories
@@ -82,21 +80,6 @@ Usage: go run main.go <github_username>
 	repos, err := fetchRepos(username, githubToken)
 	if err != nil {
 		log.Fatalf("Error fetching repos: %v\n", err)
-	}
-
-	var ganttData []string
-	for _, repo := range repos {
-		firstCommit, lastCommit, err := fetchFirstAndLastCommit(username, repo.Name, githubToken)
-		if err != nil {
-			log.Printf("Error fetching commits for repo %s: %v\n", repo.Name, err)
-			continue
-		}
-
-		ganttData = append(ganttData,
-							fmt.Sprintf("%s: %s, %s",
-										repo.Name,
-										firstCommit.Format("2006-01-02"),
-										lastCommit.Format("2006-01-02")))
 	}
 
     log.Info("Generating Gantt Chart")
@@ -219,7 +202,15 @@ func generateGanttChart(repos []GitHubRepo) string {
 
     ganttChart := "gantt\n    dateFormat  YYYY-MM-DD\n    title Repositories Gantt Chart\n"
     for _, repo := range repos {
-        ganttChart += fmt.Sprintf("    %s : %s, %s, %s\n", repo.Name, repo.CreatedAt.Format("2006-01-02"), repo.CreatedAt.Format("2006-01-02"), repo.PushedAt.Format("2006-01-02"))
+		taskType := "active"
+		if ! isWithinLastSixMonths(repo.PushedAt) {
+			taskType = "done"
+		}
+        ganttChart += fmt.Sprintf("    %s : %s, %s, %s\n",
+									repo.Name,
+									taskType,
+									repo.CreatedAt.Format("2006-01-02"),
+									repo.PushedAt.Format("2006-01-02"))
     }
 
     return ganttChart
@@ -239,4 +230,14 @@ func writeGanttChartToFile(ganttChart string, fileName string) error {
     }
 
     return nil
+}
+
+func isWithinLastSixMonths(date time.Time) bool {
+    now := time.Now()
+
+    // calculate the date that is 6 months ago from now
+    sixMonthsAgo := now.AddDate(0, -6, 0)
+
+    // check if the given date is after or equal to the date 6 months ago
+    return date.After(sixMonthsAgo)
 }
