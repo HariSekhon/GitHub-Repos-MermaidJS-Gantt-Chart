@@ -48,18 +48,40 @@ TODO: update Codacy grade link below - it's a hash so cannot be predicted to rep
 [![SonarCloud](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/sonarcloud.yaml/badge.svg)](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/sonarcloud.yaml)
 [![Trivy](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/trivy.yaml/badge.svg)](https://github.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/actions/workflows/trivy.yaml)
 
-## PUT CONTENT HERE
-
-### Customize Repo in 1 Command
-
-Run this script to replace the repo name and workflow URL references across the configurations for CI/CD and
-other variety of files in this repo:
+## Run
 
 ```shell
-./customize.sh <new_repo_name>
+go run main.go <username>
 ```
 
-Then delete the script and edit this README.
+Generates file:
+
+```none
+github_gantt.md
+```
+
+## Build Binary
+
+You can also build a portable binary by just running the Makefile:
+
+```shell
+make
+```
+
+Generates a binary `github-repos-gantt`.
+
+Use this binary
+
+```shell
+./github-repos-gantt <username>
+```
+
+## Results
+
+Generates a `gant_chart.md` with contents like this:
+
+<!-- GANTT_CHART_START -->
+<!-- GANTT_CHART_END -->
 
 #### Ensure to update Codacy Grade link manually after adding this repo to Codacy since the link is a hash and therefore cannot be predicted for replacement by `./customize.sh`.
 
