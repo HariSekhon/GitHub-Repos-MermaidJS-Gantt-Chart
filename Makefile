@@ -40,6 +40,8 @@ REPO := HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart
 
 CODE_FILES := $(shell git ls-files | grep -E -e '\.sh$$' -e '\.py$$' | sort)
 
+BINARY=github-repos-gantt
+
 .PHONY: build
 build: init
 	@echo ================
@@ -47,9 +49,7 @@ build: init
 	@echo ================
 	@$(MAKE) git-summary
 	@echo
-	# defer via external sub-call, otherwise will result in error like
-	# make: *** No rule to make target 'python-version', needed by 'build'.  Stop.
-	@$(MAKE) python-version
+	go build -o "$(BINARY)" main.go
 
 	if [ -z "$(CPANM)" ]; then make; exit $$?; fi
 	$(MAKE) system-packages-python
