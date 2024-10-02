@@ -80,8 +80,15 @@ Use this binary
 
 Generates a `gant_chart.md` with contents like this:
 
+````
 <!-- GANTT_CHART_START -->
 <!-- GANTT_CHART_END -->
+````
+
+That visualizes like this:
+
+<!-- GANTT_CHART_START2 -->
+<!-- GANTT_CHART_END2 -->
 
 ## More Core Repos
 
