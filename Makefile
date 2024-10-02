@@ -51,6 +51,10 @@ build: init
 	@echo
 	go build -o "$(BINARY)" main.go
 
+.PHONY: gorun
+gorun:
+	go run main.go HariSekhon
+
 .PHONY: init
 init:
 	@echo
