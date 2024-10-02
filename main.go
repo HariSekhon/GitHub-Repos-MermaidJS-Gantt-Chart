@@ -23,12 +23,16 @@ import (
 	log "github.com/sirupsen/logrus"
 	"net/http"
 	"os"
+	"sort"
 	"strings"
 	"time"
 )
 
 type GitHubRepo struct {
-	Name string `json:"name"`
+    Name      string    `json:"name"`
+    Fork      bool      `json:"fork"`
+    CreatedAt time.Time `json:"created_at"`
+    PushedAt  time.Time `json:"pushed_at"`
 }
 
 type GitHubCommit struct {
@@ -95,9 +99,14 @@ Usage: go run main.go <github_username>
 										lastCommit.Format("2006-01-02")))
 	}
 
-	err = generateMarkdown(username, ganttData)
+    log.Info("Generating Gantt Chart")
+	ganttChart := generateGanttChart(repos)
+
+	var filename = "gantt_chart.md"
+	log.Info("Writing to ", filename)
+	err = writeGanttChartToFile(ganttChart, filename)
 	if err != nil {
-		log.Fatalf("Error generating Markdown: %v\n", err)
+		log.Fatalf("Error writing Gantt chart to file: %v", err)
 	}
 
 	fmt.Println("Markdown file with Mermaid.js Gantt chart generated successfully")
@@ -137,7 +146,12 @@ func fetchRepos(username, token string) ([]GitHubRepo, error) {
 			break
 		}
 
-		allRepos = append(allRepos, repos...)
+        // filter out forked repos
+        for _, repo := range repos {
+            if !repo.Fork {
+                allRepos = append(allRepos, repo)
+            }
+        }
 
 		if resp.Header.Get("Link") == "" || ! hasNextPage(resp.Header.Get("Link")) {
 			break
@@ -188,30 +202,32 @@ func fetchFirstAndLastCommit(owner, repo, token string) (time.Time, time.Time, e
 	return firstCommit, lastCommit, nil
 }
 
-func generateMarkdown(username string, ganttData []string) error {
-	file, err := os.Create("gantt_chart.md")
-	if err != nil {
-		return err
-	}
-	defer file.Close()
+func generateGanttChart(repos []GitHubRepo) string {
+    // sort the repos by start date (CreatedAt)
+    sort.Slice(repos, func(i, j int) bool {
+        return repos[i].CreatedAt.Before(repos[j].CreatedAt)
+    })
 
-	log.Info("Writing Mermaid.js Gantt Chart Header")
-	_, err = file.WriteString(fmt.Sprintf("# GitHub Repo Commit Timeline for %s\n\n", username))
-	_, err = file.WriteString("```mermaid\ngantt\n    dateFormat  YYYY-MM-DD\n    title Commit History for Repos\n\n")
-	if err != nil {
-		return err
-	}
+    ganttChart := "gantt\n    dateFormat  YYYY-MM-DD\n    title Repositories Gantt Chart\n"
+    for _, repo := range repos {
+        ganttChart += fmt.Sprintf("    %s : %s, %s, %s\n", repo.Name, repo.CreatedAt.Format("2006-01-02"), repo.CreatedAt.Format("2006-01-02"), repo.PushedAt.Format("2006-01-02"))
+    }
 
-	log.Info("Writing the Gantt Chart Data")
-	for _, line := range ganttData {
-		_, err := file.WriteString(fmt.Sprintf("    %s\n", line))
-		if err != nil {
-			return err
-		}
-	}
+    return ganttChart
+}
 
-	// Close the Mermaid code block
-	_, err = file.WriteString("```\n")
-	log.Info("Wrote gantt_chart.md")
-	return err
+func writeGanttChartToFile(ganttChart string, fileName string) error {
+    // create or overwrite the specified file
+    file, err := os.Create(fileName)
+    if err != nil {
+        return fmt.Errorf("could not create file %s: %v", fileName, err)
+    }
+    defer file.Close()
+
+    _, err = file.WriteString(ganttChart)
+    if err != nil {
+        return fmt.Errorf("could not write to file %s: %v", fileName, err)
+    }
+
+    return nil
 }
