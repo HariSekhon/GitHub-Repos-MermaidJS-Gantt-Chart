@@ -62,7 +62,7 @@ for x in GANTT_CHART_START GANTT_CHART_END GANTT_CHART2_START GANTT_CHART2_END; 
     fi
 done
 
-timestamp "Replacing index in file: $markdown_file"
+timestamp "Replacing Gantt Chart in file: $markdown_file"
 
 sed -n "
     1,/GANTT_CHART_START/p
