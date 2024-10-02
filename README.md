@@ -54,10 +54,10 @@ TODO: update Codacy grade link below - it's a hash so cannot be predicted to rep
 go run main.go <username>
 ```
 
-Generates file:
+Generates [MermaidJS](https://mermaid.js.org/) file:
 
 ```none
-github_gantt.md
+gantt_chart.mmd
 ```
 
 ## Build Binary
@@ -78,7 +78,7 @@ Use this binary
 
 ## Results
 
-Generates a `gant_chart.md` with contents like this:
+Generates a `gant_chart.mmd` with contents like this:
 
 <!-- GANTT_CHART_START -->
 
@@ -122,7 +122,7 @@ gantt
 
 <!-- GANTT_CHART_END -->
 
-That visualizes like this:
+That can be embedded into a GitHub `README.md` or run in MermaidJS to visualize like this:
 
 <!-- GANTT_CHART2_START -->
 
