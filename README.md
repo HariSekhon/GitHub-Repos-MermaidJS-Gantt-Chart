@@ -223,7 +223,8 @@ gantt
 
 ## MermaidJS Gantt Config
 
-The [init.mmd](init.mmd) file contains the settings that are read into the generated `gantt_chart.mmd` file.
+The [init.mmd](https://raw.githubusercontent.com/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/refs/heads/main/init.mmd)
+file contains the settings that are read into the generated `gantt_chart.mmd` file.
 
 ```none
 init.mmd
