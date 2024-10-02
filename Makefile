@@ -68,4 +68,4 @@ test:
 
 .PHONY: clean
 clean:
-	@rm -fv -- *.pyc *.pyo
+	@rm -fv -- $(BINARY)
