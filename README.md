@@ -97,7 +97,7 @@ Use this binary
 
 ## Results
 
-Generates a `gant_chart.mmd` with contents like this:
+Generates a [gant_chart.mmd](gantt_chart.mmd) with contents like this:
 
 <!-- GANTT_CHART_START -->
 
@@ -159,7 +159,7 @@ gantt
 
 <!-- GANTT_CHART_END -->
 
-That can be embedded into a GitHub `README.md` or run in MermaidJS to visualize like this:
+That can be embedded into a GitHub markdown file such as a `README.md` or run in MermaidJS to visualize like this:
 
 <!-- GANTT_CHART2_START -->
 
