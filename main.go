@@ -102,9 +102,18 @@ Usage: go run main.go <github_username>
     log.Info("Generating Gantt Chart")
 	ganttChart := generateGanttChart(repos)
 
-	var filename = "gantt_chart.mmd"
+	initFile := "init.mmd"
+	log.Info("Reading Gantt Chart Config from ", initFile)
+	ganttConfigBytes, err := ioutil.ReadFile(initFile)
+    if err != nil {
+        log.Fatalf("Error reading file: %v", err)
+    }
+
+	ganttConfig := string(ganttConfigBytes)
+
+	filename := "gantt_chart.mmd"
 	log.Info("Writing to ", filename)
-	err = writeGanttChartToFile(ganttChart, filename)
+	err = writeGanttChartToFile(ganttConfig + ganttChart, filename)
 	if err != nil {
 		log.Fatalf("Error writing Gantt chart to file: %v", err)
 	}
