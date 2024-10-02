@@ -9,7 +9,7 @@
 
 TODO: update Codacy grade link below - it's a hash so cannot be predicted to replace via `./customize.sh`
 
-[![Codacy](https://app.codacy.com/project/badge/Grade/abce2438224948fd93d462cd6aba3aaf)](https://www.codacy.com/gh/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/dashboard)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7cec58af694f426397bd74ea19c9037a)](https://app.codacy.com/gh/HariSekhon/GitHub-Repos-MermaidJS-Gantt-Chart/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/harisekhon/GitHub-Repos-MermaidJS-Gantt-Chart/badge)](https://www.codefactor.io/repository/github/harisekhon/GitHub-Repos-MermaidJS-Gantt-Chart)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_GitHub-Repos-MermaidJS-Gantt-Chart&metric=alert_status)](https://sonarcloud.io/dashboard?id=HariSekhon_GitHub-Repos-MermaidJS-Gantt-Chart)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_GitHub-Repos-MermaidJS-Gantt-Chart&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_GitHub-Repos-MermaidJS-Gantt-Chart)
@@ -82,8 +82,6 @@ Generates a `gant_chart.md` with contents like this:
 
 <!-- GANTT_CHART_START -->
 <!-- GANTT_CHART_END -->
-
-#### Ensure to update Codacy Grade link manually after adding this repo to Codacy since the link is a hash and therefore cannot be predicted for replacement by `./customize.sh`.
 
 ## More Core Repos
 
