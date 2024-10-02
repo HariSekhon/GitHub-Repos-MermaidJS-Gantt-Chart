@@ -109,7 +109,7 @@ Usage: go run main.go <github_username>
 		log.Fatalf("Error writing Gantt chart to file: %v", err)
 	}
 
-	fmt.Println("Markdown file with Mermaid.js Gantt chart generated successfully")
+	log.Info("Markdown file with Mermaid.js Gantt chart generated successfully")
 }
 
 func fetchRepos(username, token string) ([]GitHubRepo, error) {
