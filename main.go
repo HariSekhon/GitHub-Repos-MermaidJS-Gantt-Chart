@@ -51,7 +51,7 @@ func main() {
 	// Step 2: Handle --help flag
 	if *helpFlag {
 		fmt.Println(`
-Generates a Markdown file gantt_chart.md with a Mermaid.js Gantt chart showing the start and end commit dates
+Generates a Markdown file gantt_chart.mmd with a Mermaid.js Gantt chart showing the start and end commit dates
 of all public GitHub repositories for the specified user
 
 Arguments:
@@ -102,7 +102,7 @@ Usage: go run main.go <github_username>
     log.Info("Generating Gantt Chart")
 	ganttChart := generateGanttChart(repos)
 
-	var filename = "gantt_chart.md"
+	var filename = "gantt_chart.mmd"
 	log.Info("Writing to ", filename)
 	err = writeGanttChartToFile(ganttChart, filename)
 	if err != nil {
