@@ -281,11 +281,14 @@ On the Gantt chart minor differences in dates are not perceptible anyway.
 Regardless of the above caveats, this is still a great and fast starting point to create the Gannt chart as it automates
 the vast majority of creating this MermaidJS [Diagram-as-Code](https://github.com/HariSekhon/Diagrams-as-Code).
 
-In my case because I have a very complex history including many Git submodule repo forkings and many trivial commits
-for submodule updates and CI/CD backporting across repos I had to exclude the above
-`git_graph_commit_history.sh` script for analysis...
+In my case because I have a very complex history including many Git submodule repo forks,
+many trivial commits of submodule updates and CI/CD backporting across repos I decided to exclude this activity
+to give a better idea of when I was heavily actively working on each repo.
+I analyzed graphs easily generated using the script
+`git_graph_commit_history.sh` in [DevOps-Bash-tools](https://github.com/HariSekhon/DevOps-Bash-tools) repo.
 
-I ended up hand tuning my Gannt chart to look like this instead which is more accurate:
+I ended up hand tuning my Gannt chart to look like this instead which is more accurate and insightful for when I was
+more heavily active on each repo:
 
 ```mermaid
 %%{ init: {
