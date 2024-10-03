@@ -58,7 +58,7 @@ using each repo's created and pushed dates.
 - [Caveats](#caveats)
   - [Trivial Commits](#trivial-commits)
   - [GitHub Repo Creation Date != Initial Git Commit Date](#github-repo-creation-date--initial-git-commit-date)
-  - [Push Date vs Last Commit Date](#push-date-vs-last-commit-date)
+  - [Last Push Date vs Last Commit Date](#last-push-date-vs-last-commit-date)
   - [QuickStart](#quickstart)
 - [More Core Repos](#more-core-repos)
   - [Knowledge](#knowledge)
@@ -266,7 +266,7 @@ need to adjust the start date to be that of your initial Git commit date for bet
 This may happening when migrating a pre-existing Git repo to GitHub, or forking a subdirectory of an existing repo to a
 new repo to use as a shared submodule.
 
-### Push Date vs Last Commit Date
+### Last Push Date vs Last Commit Date
 
 This program uses GitHub API's last push date, which may not be the same as the last commit date, but usually these are
 close enough together that it doesn't matter.
