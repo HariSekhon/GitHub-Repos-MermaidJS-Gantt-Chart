@@ -58,6 +58,7 @@ using each repo's created and pushed dates.
 - [Caveats](#caveats)
   - [Trivial Commits](#trivial-commits)
   - [GitHub Repo Creation Date != Initial Git Commit Date](#github-repo-creation-date--initial-git-commit-date)
+  - [Push Date vs Last Commit Date](#push-date-vs-last-commit-date)
   - [QuickStart](#quickstart)
 - [More Core Repos](#more-core-repos)
   - [Knowledge](#knowledge)
@@ -265,9 +266,17 @@ need to adjust the start date to be that of your initial Git commit date for bet
 This may happening when migrating a pre-existing Git repo to GitHub, or forking a subdirectory of an existing repo to a
 new repo to use as a shared submodule.
 
+### Push Date vs Last Commit Date
+
+This program uses GitHub API's last push date, which may not be the same as the last commit date, but usually these are
+close enough together that it doesn't matter.
+
+This is still really the last activity date of the repo and generally fine to use.
+On the Gantt chart minor differences in dates are not perceptible anyway.
+
 ### QuickStart
 
-Regardless of the above two caveats, this is still a great and fast starting point for create the Gannt chart though as it automates
+Regardless of the above caveats, this is still a great and fast starting point for create the Gannt chart though as it automates
 the [Diagram-as-Code](https://github.com/HariSekhon/Diagrams-as-Code).
 
 ## More Core Repos
