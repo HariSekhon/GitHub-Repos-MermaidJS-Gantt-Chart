@@ -57,7 +57,7 @@ using each repo's created and pushed dates.
 - [MermaidJS Gantt Config](#mermaidjs-gantt-config)
 - [Caveats](#caveats)
   - [Trivial Commits](#trivial-commits)
-  - [GitHub Repo Creation Date != Initial Git Commit Date](#github-repo-creation-date--initial-git-commit-date)
+  - [GitHub Repo Creation Date vs Initial Git Commit Date](#github-repo-creation-date-vs-initial-git-commit-date)
   - [Last Push Date vs Last Commit Date](#last-push-date-vs-last-commit-date)
   - [QuickStart](#quickstart)
 - [More Core Repos](#more-core-repos)
@@ -255,7 +255,7 @@ obvious then you can filter the git log commit count to only look at code paths.
 `git_graph_commit_history.sh` can do both of these instantly and can be found in the epic
 [DevOps-Bash-tools](https://github.com/HariSekhon/DevOps-Bash-tools) repo.
 
-### GitHub Repo Creation Date != Initial Git Commit Date
+### GitHub Repo Creation Date vs Initial Git Commit Date
 
 If you've pushed an existing Git repo into a new GitHub repo the start date of the gantt chart will be too new as it's
 the creation date of the GitHub repo as returned by the GitHub API instead of the initial Git commit.
