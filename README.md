@@ -230,6 +230,18 @@ file contains the settings that are read into the generated `gantt_chart.mmd` fi
 init.mmd
 ```
 
+## Limitations
+
+If you've made trivial commits and pushes to update a repo's `README.md` or submodule updates
+but not really added any substance to the code of the project, then it will appear to be a current project by the last
+push date.
+
+In such cases you may prefer to alter the end date to when you know you stopped actively working
+on the project (look at the `git log` or `git log -p`) to give a more realistic.
+
+This is still a great and fast starting point for create the Gannt chart though as it automates
+the [Diagram-as-Code](https://github.com/HariSekhon/Diagrams-as-Code).
+
 ## More Core Repos
 
 <!-- OTHER_REPOS_START -->
