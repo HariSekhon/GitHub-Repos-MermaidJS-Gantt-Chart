@@ -59,7 +59,7 @@ using each repo's created and pushed dates.
   - [Trivial Commits](#trivial-commits)
   - [GitHub Repo Creation Date vs Initial Git Commit Date](#github-repo-creation-date-vs-initial-git-commit-date)
   - [Last Push Date vs Last Commit Date](#last-push-date-vs-last-commit-date)
-  - [QuickStart](#quickstart)
+  - [Use as a QuickStart](#use-as-a-quickstart)
 - [More Core Repos](#more-core-repos)
   - [Knowledge](#knowledge)
   - [DevOps Code](#devops-code)
@@ -244,7 +244,7 @@ but not really added any substance to the code of the project, then it will appe
 push date.
 
 In such cases you may prefer to alter the end date to when you know you stopped actively working
-on the project (look at the `git log` or `git log -p`) to give a more realistic.
+on the project (look at the `git log` or `git log -p`) to give a more realistic ending timeline.
 
 One solution is to generate graphs of commits per month and year to see visually where the substantial activity dropped
 off.
@@ -260,24 +260,26 @@ obvious then you can filter the git log commit count to only look at code paths.
 If you've pushed an existing Git repo into a new GitHub repo the start date of the gantt chart will be too new as it's
 the creation date of the GitHub repo as returned by the GitHub API instead of the initial Git commit.
 
-In most cases these are the same, only in cases of pre-existing Git repos being pushed into new GitHub repos should you
+In most cases these are the same.
+Only in cases of pre-existing Git repos being pushed into new GitHub repos should you
 need to adjust the start date to be that of your initial Git commit date for better accuracy.
 
-This may happening when migrating a pre-existing Git repo to GitHub, or forking a subdirectory of an existing repo to a
-new repo to use as a shared submodule.
+This scenario may arise when migrating a pre-existing Git repo to GitHub, or forking a subdirectory of an existing repo
+to a new repo to use as a shared submodule.
 
 ### Last Push Date vs Last Commit Date
 
-This program uses GitHub API's last push date, which may not be the same as the last commit date, but usually these are
-close enough together that it doesn't matter.
+This program uses GitHub API's last git push date, which may not be the same as the last git commit date,
+but usually these are close enough together that it doesn't matter.
 
 This is still really the last activity date of the repo and generally fine to use.
+
 On the Gantt chart minor differences in dates are not perceptible anyway.
 
-### QuickStart
+### Use as a QuickStart
 
-Regardless of the above caveats, this is still a great and fast starting point for create the Gannt chart though as it automates
-the [Diagram-as-Code](https://github.com/HariSekhon/Diagrams-as-Code).
+Regardless of the above caveats, this is still a great and fast starting point to create the Gannt chart as it automates
+the vast majority of creating this MermaidJS [Diagram-as-Code](https://github.com/HariSekhon/Diagrams-as-Code).
 
 ## More Core Repos
 
