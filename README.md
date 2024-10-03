@@ -55,6 +55,10 @@ using each repo's created and pushed dates.
 - [Build Binary](#build-binary)
 - [Results](#results)
 - [MermaidJS Gantt Config](#mermaidjs-gantt-config)
+- [Caveats](#caveats)
+  - [Trivial Commits](#trivial-commits)
+  - [GitHub Repo Creation Date != Initial Git Commit Date](#github-repo-creation-date--initial-git-commit-date)
+  - [QuickStart](#quickstart)
 - [More Core Repos](#more-core-repos)
   - [Knowledge](#knowledge)
   - [DevOps Code](#devops-code)
@@ -230,7 +234,9 @@ file contains the settings that are read into the generated `gantt_chart.mmd` fi
 init.mmd
 ```
 
-## Limitations
+## Caveats
+
+### Trivial Commits
 
 If you've made trivial commits and pushes to update a repo's `README.md` or submodule updates
 but not really added any substance to the code of the project, then it will appear to be a current project by the last
@@ -239,7 +245,29 @@ push date.
 In such cases you may prefer to alter the end date to when you know you stopped actively working
 on the project (look at the `git log` or `git log -p`) to give a more realistic.
 
-This is still a great and fast starting point for create the Gannt chart though as it automates
+One solution is to generate graphs of commits per month and year to see visually where the substantial activity dropped
+off.
+
+If there was recent substantial activity of `README.md` and submodule updates making the drop off in activity not
+obvious then you can filter the git log commit count to only look at code paths.
+
+`git_graph_commit_history.sh` can do both of these instantly and can be found in the epic
+[DevOps-Bash-tools](https://github.com/HariSekhon/DevOps-Bash-tools) repo.
+
+### GitHub Repo Creation Date != Initial Git Commit Date
+
+If you've pushed an existing Git repo into a new GitHub repo the start date of the gantt chart will be too new as it's
+the creation date of the GitHub repo as returned by the GitHub API instead of the initial Git commit.
+
+In most cases these are the same, only in cases of pre-existing Git repos being pushed into new GitHub repos should you
+need to adjust the start date to be that of your initial Git commit date for better accuracy.
+
+This may happening when migrating a pre-existing Git repo to GitHub, or forking a subdirectory of an existing repo to a
+new repo to use as a shared submodule.
+
+### QuickStart
+
+Regardless of the above two caveats, this is still a great and fast starting point for create the Gannt chart though as it automates
 the [Diagram-as-Code](https://github.com/HariSekhon/Diagrams-as-Code).
 
 ## More Core Repos
